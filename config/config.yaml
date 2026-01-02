@@ -57,7 +57,7 @@ platforms:
 # max_age_days: 可选，覆盖全局 freshness_filter.max_age_days
 # ===============================================================
 rss:
-  enabled: true                       # 是否启用 RSS 抓取
+  enabled: false                      # 是否启用 RSS 抓取
 
   # 文章新鲜度过滤配置（全局默认值）
   # 过滤掉发布时间超过指定天数的旧文章，避免同一篇文章重复出现在推送中
@@ -122,7 +122,7 @@ rss:
 #    • 适用场景：避免重复信息干扰
 # ===============================================================
 report:
-  mode: "current"                     # 可选: daily | current | incremental
+  mode: "daily"                       # 可选: daily | current | incremental
   display_mode: "keyword"             # 可选: keyword | platform
                                       # keyword: 按关键词分组显示（默认）
                                       # platform: 按平台/来源分组显示
@@ -217,7 +217,7 @@ storage:
   formats:
     sqlite: true                      # 主存储（必须启用）
     txt: false                        # 是否生成 TXT 快照
-    html: true                       # 是否生成 HTML 报告（⚠️ 邮件推送必须设为 true）
+    html: true                        # 是否生成 HTML 报告（⚠️ 邮件推送必须设为 true）
 
   # 本地存储配置
   local:
